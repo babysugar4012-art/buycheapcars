@@ -23,13 +23,6 @@
     }
     .hero-slide.active { opacity: 1; }
 
-    /* Custom Gradient Text */
-    .brand-gradient-text {
-      background: linear-gradient(135deg, #DC2626 0%, #991B1B 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
     /* Modern Card Elevate Effects */
     .car-card {
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -66,7 +59,7 @@
     </div>
   </header>
 
-  <!-- Bright & Stunning Hero Section -->
+  <!-- Hero Section -->
   <section class="relative h-[70vh] min-h-[500px] w-full overflow-hidden flex items-center justify-center bg-slate-900">
     <div id="heroSlideshow" class="absolute inset-0">
       <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1920&q=80');"></div>
@@ -74,10 +67,10 @@
       <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1920&q=80');"></div>
     </div>
 
-    <!-- Light Gradient Overlay to Keep Hero Punchy & Readable -->
+    <!-- Gradient Overlay -->
     <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/65 to-slate-950/40"></div>
 
-    <!-- Hero Banner Content -->
+    <!-- Hero Content -->
     <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-left w-full">
       <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-600 text-white text-xs font-black uppercase tracking-widest mb-6 shadow-md shadow-red-600/30">
         <i class="fa-solid fa-bolt text-amber-300"></i> Direct Wholesale Pricing
@@ -132,7 +125,7 @@
     </div>
   </footer>
 
-  <!-- RESERVATION MODAL (Clean Light Theme) -->
+  <!-- RESERVATION MODAL -->
   <div id="reservationModal" class="fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4 hidden">
     <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto border border-slate-100">
       <button id="closeReservationModal" class="absolute top-4 right-4 w-9 h-9 bg-slate-100 hover:bg-slate-200 rounded-full text-slate-500 hover:text-slate-900 flex items-center justify-center transition-colors">
@@ -229,7 +222,7 @@
           <button type="submit" class="w-full py-3 bg-red-600 hover:bg-red-500 text-white font-extrabold rounded-xl shadow-md transition-all">
             Authenticate & Access Dashboard
           </button>
-          <div id="loginError" class="text-xs text-red-600 font-bold hidden">Invalid Password. Default is: admin123</div>
+          <div id="loginError" class="text-xs text-red-600 font-bold hidden">Invalid Password. Try again.</div>
         </form>
       </div>
 
@@ -314,8 +307,6 @@
     };
 
     const RECEIVING_EMAIL = "buycheapcarsonline@gmail.com";
-    let storedPasswordHash = "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"; // default: admin123
-
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
 
@@ -352,11 +343,6 @@
         orderIndex: 2
       }
     ];
-
-    async function hashPassword(str) {
-      const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
-      return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
-    }
 
     // 1. LIVE FIRESTORE INVENTORY LISTENER
     const carsCollection = collection(db, "vehicles");
@@ -424,7 +410,7 @@
       }).join('');
     }
 
-    // 2. RESERVATION MODAL & EMAIL TRIGGER
+    // 2. RESERVATION MODAL
     window.openReservationModal = (carId) => {
       selectedCar = vehiclesList.find(c => c.id === carId);
       if (!selectedCar) return;
@@ -480,7 +466,7 @@
       });
     };
 
-    // 3. KEYBOARD SHORTCUT FOR HIDDEN ADMIN PORTAL (Ctrl + Shift + A)
+    // 3. KEYBOARD SHORTCUT (Ctrl + Shift + A) & DIRECT ADMIN LOGIN
     const adminModal = document.getElementById('adminModal');
     
     window.addEventListener('keydown', (e) => {
@@ -494,12 +480,12 @@
       adminModal.classList.add('hidden');
     };
 
-    document.getElementById('adminLoginForm').onsubmit = async (e) => {
+    // Direct Password Check Fix
+    document.getElementById('adminLoginForm').onsubmit = (e) => {
       e.preventDefault();
       const input = document.getElementById('adminPasswordInput').value;
-      const hashed = await hashPassword(input);
 
-      if (hashed === storedPasswordHash) {
+      if (input === 'admin123') {
         document.getElementById('adminLoginScreen').classList.add('hidden');
         document.getElementById('adminPanel').classList.remove('hidden');
         document.getElementById('loginError').classList.add('hidden');
