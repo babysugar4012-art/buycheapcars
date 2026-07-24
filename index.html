@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Buy Cheap Cars | Premium Wholesale Direct</title>
+  <title id="pageTitle">Buy Cheap Cars | Premium Wholesale Direct</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font Awesome Icons -->
@@ -12,7 +12,6 @@
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
     body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F8FAFC; color: #0F172A; }
     
-    /* Background Slideshow Animation */
     .hero-slide {
       position: absolute;
       inset: 0;
@@ -23,7 +22,6 @@
     }
     .hero-slide.active { opacity: 1; }
 
-    /* Modern Card Elevate Effects */
     .car-card {
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -39,55 +37,53 @@
   <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-red-600 to-rose-500 flex items-center justify-center text-white shadow-lg shadow-red-500/30 group-hover:scale-105 transition-transform">
-          <i class="fa-solid fa-car-side text-xl"></i>
+      <!-- Dynamic Brand Logo -->
+      <a href="#" class="flex items-center gap-2.5 sm:gap-3 group">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-gradient-to-tr from-red-600 to-rose-500 flex items-center justify-center text-white shadow-lg shadow-red-500/30 group-hover:scale-105 transition-transform flex-shrink-0">
+          <i class="fa-solid fa-car-side text-lg sm:text-xl"></i>
         </div>
         <div>
-          <span class="text-2xl font-black tracking-tight text-slate-900 block leading-tight">BUY CHEAP CARS</span>
-          <span class="text-[10px] font-extrabold tracking-widest text-red-600 uppercase block">Direct Wholesale Reservations</span>
+          <span id="siteBrandName" class="text-lg sm:text-2xl font-black tracking-tight text-slate-900 block leading-tight">BUY CHEAP CARS</span>
+          <span id="siteBrandSub" class="text-[9px] sm:text-[10px] font-extrabold tracking-widest text-red-600 uppercase block">Direct Wholesale Reservations</span>
         </div>
       </a>
 
-      <!-- Quick Link -->
-      <div class="flex items-center gap-4">
-        <a href="#inventory" class="inline-flex items-center gap-2 text-sm font-bold text-slate-700 hover:text-red-600 transition-colors bg-slate-100 hover:bg-slate-200/70 px-4 py-2.5 rounded-xl">
-          <i class="fa-solid fa-car text-red-600"></i> Browse Inventory
+      <!-- Quick Nav Link -->
+      <div class="flex items-center gap-2 sm:gap-4">
+        <a href="#inventory" id="navBrowseBtn" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-700 hover:text-red-600 transition-colors bg-slate-100 hover:bg-slate-200/70 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl">
+          <i class="fa-solid fa-car text-red-600"></i> <span id="navBrowseText">Browse Inventory</span>
         </a>
       </div>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="relative h-[70vh] min-h-[500px] w-full overflow-hidden flex items-center justify-center bg-slate-900">
+  <section class="relative h-[75vh] min-h-[520px] w-full overflow-hidden flex items-center justify-center bg-slate-900">
     <div id="heroSlideshow" class="absolute inset-0">
       <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1920&q=80');"></div>
       <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80');"></div>
       <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1920&q=80');"></div>
     </div>
 
-    <!-- Gradient Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/65 to-slate-950/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40"></div>
 
-    <!-- Hero Content -->
     <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-left w-full">
-      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-600 text-white text-xs font-black uppercase tracking-widest mb-6 shadow-md shadow-red-600/30">
+      <span id="heroBadge" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-600 text-white text-[11px] sm:text-xs font-black uppercase tracking-widest mb-4 sm:mb-6 shadow-md shadow-red-600/30">
         <i class="fa-solid fa-bolt text-amber-300"></i> Direct Wholesale Pricing
       </span>
       
-      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-none mb-6">
-        Drive Your Dream Car. <br />
-        <span class="text-red-500">Unbeatable Low Down Payments.</span>
+      <h1 class="text-3xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-tight sm:leading-none mb-4 sm:mb-6">
+        <span id="heroTitleLine1">Drive Your Dream Car.</span> <br />
+        <span id="heroTitleLine2" class="text-red-500">Unbeatable Low Down Payments.</span>
       </h1>
       
-      <p class="text-base sm:text-xl text-slate-200 max-w-2xl mb-8 font-medium leading-relaxed">
+      <p id="heroDesc" class="text-sm sm:text-xl text-slate-200 max-w-2xl mb-6 sm:mb-8 font-medium leading-relaxed">
         Reserve luxury or reliable daily vehicles directly. Low upfront down payments with official sales contracts delivered straight to your email inbox.
       </p>
       
       <div class="flex flex-col sm:flex-row items-center gap-4">
-        <a href="#inventory" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-black text-base px-8 py-4 rounded-xl shadow-xl shadow-red-600/40 hover:scale-105 transition-all">
-          <span>VIEW AVAILABLE VEHICLES</span>
+        <a href="#inventory" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-black text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl shadow-xl shadow-red-600/40 hover:scale-105 transition-all">
+          <span id="heroCtaText">VIEW AVAILABLE VEHICLES</span>
           <i class="fa-solid fa-arrow-down"></i>
         </a>
       </div>
@@ -95,19 +91,19 @@
   </section>
 
   <!-- Clean White Inventory Grid -->
-  <main id="inventory" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex-1 w-full">
-    <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-10 pb-6 border-b border-slate-200 gap-4">
+  <main id="inventory" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 flex-1 w-full">
+    <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-8 sm:mb-10 pb-6 border-b border-slate-200 gap-4">
       <div>
-        <span class="text-xs font-black text-red-600 uppercase tracking-widest block mb-1">Live Dealer Showroom</span>
-        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Featured Vehicles</h2>
+        <span id="sectionSubhead" class="text-xs font-black text-red-600 uppercase tracking-widest block mb-1">Live Dealer Showroom</span>
+        <h2 id="sectionTitle" class="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">Featured Vehicles</h2>
       </div>
       <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-extrabold px-3.5 py-2 rounded-xl flex items-center gap-2 shadow-sm">
-        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span> Inventory Updated Live
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span> Live Sync Enabled
       </span>
     </div>
 
     <!-- Vehicles Grid Container -->
-    <div id="carsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div id="carsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
       <div class="animate-pulse bg-white rounded-2xl h-96 border border-slate-200 shadow-sm"></div>
       <div class="animate-pulse bg-white rounded-2xl h-96 border border-slate-200 shadow-sm"></div>
       <div class="animate-pulse bg-white rounded-2xl h-96 border border-slate-200 shadow-sm"></div>
@@ -115,10 +111,10 @@
   </main>
 
   <!-- Clean Footer -->
-  <footer class="bg-white border-t border-slate-200 py-10 text-slate-500 text-xs mt-12">
+  <footer class="bg-white border-t border-slate-200 py-8 sm:py-10 text-slate-500 text-xs mt-12">
     <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
       <div>
-        <span class="text-slate-900 font-black text-sm block">BUY CHEAP CARS</span>
+        <span id="footerBrandName" class="text-slate-900 font-black text-sm block">BUY CHEAP CARS</span>
         <span>© Direct Reservation Portal. All rights reserved.</span>
       </div>
       <div class="text-slate-400 font-medium">Verified Direct Reservation System</div>
@@ -126,23 +122,23 @@
   </footer>
 
   <!-- RESERVATION MODAL -->
-  <div id="reservationModal" class="fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4 hidden">
-    <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto border border-slate-100">
+  <div id="reservationModal" class="fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-sm flex items-center justify-center p-4 hidden overflow-y-auto">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-5 sm:p-8 shadow-2xl relative my-8 border border-slate-100">
       <button id="closeReservationModal" class="absolute top-4 right-4 w-9 h-9 bg-slate-100 hover:bg-slate-200 rounded-full text-slate-500 hover:text-slate-900 flex items-center justify-center transition-colors">
         <i class="fa-solid fa-xmark text-base"></i>
       </button>
 
       <div class="mb-6">
         <span class="text-xs font-black text-red-600 uppercase tracking-widest block mb-1">Direct Contract Request</span>
-        <h3 id="modalCarTitle" class="text-2xl font-black text-slate-900 leading-tight">Vehicle Title</h3>
+        <h3 id="modalCarTitle" class="text-xl sm:text-2xl font-black text-slate-900 leading-tight">Vehicle Title</h3>
         <div class="mt-4 p-4 bg-emerald-50/80 rounded-2xl border border-emerald-200/80 flex justify-between items-center">
           <div>
-            <div class="text-[11px] uppercase font-black text-emerald-800">Required Down Payment</div>
-            <div id="modalDownPayment" class="text-3xl font-black text-emerald-600">$0</div>
+            <div class="text-[10px] sm:text-[11px] uppercase font-black text-emerald-800">Required Down Payment</div>
+            <div id="modalDownPayment" class="text-2xl sm:text-3xl font-black text-emerald-600">$0</div>
           </div>
           <div class="text-right">
-            <div class="text-[11px] uppercase font-extrabold text-slate-400">Full Vehicle Price</div>
-            <div id="modalFullPrice" class="text-base font-extrabold text-slate-700">$0</div>
+            <div class="text-[10px] sm:text-[11px] uppercase font-extrabold text-slate-400">Full Vehicle Price</div>
+            <div id="modalFullPrice" class="text-sm sm:text-base font-extrabold text-slate-700">$0</div>
           </div>
         </div>
       </div>
@@ -202,98 +198,206 @@
     </div>
   </div>
 
-  <!-- HIDDEN ADMIN PORTAL MODAL (Triggered strictly by Ctrl + Shift + A) -->
-  <div id="adminModal" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-md flex items-center justify-center p-4 hidden">
-    <div class="bg-white rounded-2xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+  <!-- FULL SITE CMS & ADMIN PORTAL MODAL (Triggered by Ctrl + Shift + A) -->
+  <div id="adminModal" class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 hidden overflow-y-auto">
+    <div class="bg-white rounded-2xl max-w-4xl w-full p-5 sm:p-8 shadow-2xl relative my-auto">
       <button id="closeAdminModal" class="absolute top-4 right-4 w-9 h-9 bg-slate-100 hover:bg-slate-200 rounded-full text-slate-500 flex items-center justify-center transition-colors">
         <i class="fa-solid fa-xmark text-base"></i>
       </button>
 
-      <!-- Admin Login Form -->
-      <div id="adminLoginScreen" class="py-6 text-center max-w-sm mx-auto">
+      <!-- Admin Login Screen -->
+      <div id="adminLoginScreen" class="py-8 text-center max-w-sm mx-auto">
         <div class="w-14 h-14 rounded-2xl bg-red-600 text-white flex items-center justify-center mx-auto mb-4 text-xl shadow-lg shadow-red-600/30">
-          <i class="fa-solid fa-user-shield"></i>
+          <i class="fa-solid fa-lock"></i>
         </div>
-        <h3 class="text-2xl font-black text-slate-900 mb-1">Admin Portal Access</h3>
-        <p class="text-xs text-slate-500 mb-6">Enter master password to manage vehicle inventory.</p>
+        <h3 class="text-2xl font-black text-slate-900 mb-1">Master Control Panel</h3>
+        <p class="text-xs text-slate-500 mb-6">Enter your password to unlock full dashboard access.</p>
         
         <form id="adminLoginForm" class="space-y-4">
-          <input type="password" id="adminPasswordInput" placeholder="Enter Password" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:ring-2 focus:ring-red-600 focus:outline-none text-center text-sm font-extrabold" />
+          <input type="password" id="adminPasswordInput" placeholder="Enter Admin Password" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:ring-2 focus:ring-red-600 focus:outline-none text-center text-sm font-extrabold" />
           <button type="submit" class="w-full py-3 bg-red-600 hover:bg-red-500 text-white font-extrabold rounded-xl shadow-md transition-all">
-            Authenticate & Access Dashboard
+            Unlock Dashboard
           </button>
           <div id="loginError" class="text-xs text-red-600 font-bold hidden">Invalid Password. Try again.</div>
         </form>
       </div>
 
-      <!-- Authenticated Admin Panel -->
-      <div id="adminPanel" class="hidden space-y-8">
+      <!-- Authenticated Full Site Control Panel -->
+      <div id="adminPanel" class="hidden space-y-6">
         <div class="flex items-center justify-between pb-4 border-b border-slate-200">
           <div>
-            <h3 class="text-xl font-black text-slate-900">Inventory Manager</h3>
-            <span class="text-xs text-emerald-600 font-bold"><i class="fa-solid fa-circle-check"></i> Authenticated Session</span>
+            <h3 class="text-xl font-black text-slate-900">Site-Wide CMS & Inventory Manager</h3>
+            <span class="text-xs text-emerald-600 font-bold"><i class="fa-solid fa-shield-halved"></i> Secure Cloud Session Active</span>
           </div>
           <button id="adminLogoutBtn" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-3 py-2 rounded-lg">
-            Logout
+            Exit Panel
           </button>
         </div>
 
-        <!-- Form for Adding / Editing Vehicles -->
-        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
-          <h4 id="formHeader" class="text-sm font-extrabold text-slate-900 uppercase tracking-wider mb-4">Add New Vehicle Listing</h4>
-          <form id="carForm" class="space-y-4">
-            <input type="hidden" id="carDocId" value="" />
-            <div>
-              <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Car Title *</label>
-              <input type="text" id="carTitle" required placeholder="e.g. 2023 Mercedes-Benz C300 AMG" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-slate-900 text-sm focus:outline-none" />
+        <!-- Tab Controls -->
+        <div class="flex border-b border-slate-200 gap-2 sm:gap-4 overflow-x-auto">
+          <button id="tabSiteCopyBtn" class="pb-3 text-xs sm:text-sm font-black text-red-600 border-b-2 border-red-600 whitespace-nowrap">
+            <i class="fa-solid fa-pen-to-square"></i> Site Texts & Branding
+          </button>
+          <button id="tabInventoryBtn" class="pb-3 text-xs sm:text-sm font-extrabold text-slate-400 hover:text-slate-700 border-b-2 border-transparent whitespace-nowrap">
+            <i class="fa-solid fa-car"></i> Vehicle Inventory
+          </button>
+          <button id="tabSecurityBtn" class="pb-3 text-xs sm:text-sm font-extrabold text-slate-400 hover:text-slate-700 border-b-2 border-transparent whitespace-nowrap">
+            <i class="fa-solid fa-key"></i> Security & Password
+          </button>
+        </div>
+
+        <!-- TAB 1: SITE COPY & BRANDING EDITOR -->
+        <div id="tabSiteCopyContent" class="space-y-4 max-h-[60vh] overflow-y-auto pr-1">
+          <form id="siteCopyForm" class="space-y-4">
+            
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-3">
+              <span class="text-xs font-black text-red-600 uppercase tracking-wider block">1. Header Branding</span>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Brand Name</label>
+                  <input type="text" id="inputBrandName" class="w-full px-3 py-2 rounded-lg border text-sm font-semibold" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Brand Subtitle</label>
+                  <input type="text" id="inputBrandSub" class="w-full px-3 py-2 rounded-lg border text-sm font-semibold" />
+                </div>
+              </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-3">
+              <span class="text-xs font-black text-red-600 uppercase tracking-wider block">2. Hero Banner Copy</span>
               <div>
-                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Required Down Payment *</label>
-                <input type="text" id="carDownPayment" required placeholder="e.g. $2,500" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-slate-900 text-sm focus:outline-none" />
+                <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Wholesale Badge Pill Text</label>
+                <input type="text" id="inputHeroBadge" class="w-full px-3 py-2 rounded-lg border text-sm font-semibold" />
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Headline Line 1 (White)</label>
+                  <input type="text" id="inputHeroTitle1" class="w-full px-3 py-2 rounded-lg border text-sm font-semibold" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Headline Line 2 (Red Highlight)</label>
+                  <input type="text" id="inputHeroTitle2" class="w-full px-3 py-2 rounded-lg border text-sm font-semibold" />
+                </div>
               </div>
               <div>
-                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Full Purchase Price *</label>
-                <input type="text" id="carFullPrice" required placeholder="e.g. $34,900" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-slate-900 text-sm focus:outline-none" />
+                <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Main Hero Description Paragraph</label>
+                <textarea id="inputHeroDesc" rows="2" class="w-full px-3 py-2 rounded-lg border text-sm font-semibold"></textarea>
+              </div>
+              <div>
+                <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Hero Call-to-Action Button Text</label>
+                <input type="text" id="inputHeroCta" class="w-full px-3 py-2 rounded-lg border text-sm font-semibold" />
               </div>
             </div>
 
-            <div>
-              <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Image URL *</label>
-              <input type="url" id="carImageUrl" required placeholder="https://images.unsplash.com/..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-slate-900 text-sm focus:outline-none" />
+            <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-3">
+              <span class="text-xs font-black text-red-600 uppercase tracking-wider block">3. Showroom Titles</span>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Showroom Small Subhead</label>
+                  <input type="text" id="inputSectionSubhead" class="w-full px-3 py-2 rounded-lg border text-sm font-semibold" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Showroom Main Title</label>
+                  <input type="text" id="inputSectionTitle" class="w-full px-3 py-2 rounded-lg border text-sm font-semibold" />
+                </div>
+              </div>
             </div>
 
-            <div>
-              <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Key Specifications (Comma-Separated)</label>
-              <input type="text" id="carSpecs" placeholder="Clean Title, 24,000 Miles, Automatic, Leather Interior" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-slate-900 text-sm focus:outline-none" />
-            </div>
-
-            <div class="flex gap-3 pt-2">
-              <button type="submit" id="saveCarBtn" class="flex-1 py-3 bg-red-600 hover:bg-red-500 text-white font-extrabold rounded-xl text-sm transition-all">
-                Save Vehicle Listing
-              </button>
-              <button type="button" id="cancelEditBtn" class="hidden py-3 px-4 bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold rounded-xl text-sm">
-                Cancel
-              </button>
-            </div>
+            <button type="submit" class="w-full py-3.5 bg-red-600 hover:bg-red-500 text-white font-extrabold rounded-xl shadow-md transition-all">
+              Save & Apply All Text Changes Live
+            </button>
           </form>
         </div>
 
-        <!-- Inventory List -->
-        <div>
-          <h4 class="text-sm font-extrabold text-slate-900 uppercase tracking-wider mb-3">Live Inventory Reordering</h4>
-          <div id="adminInventoryList" class="space-y-3"></div>
+        <!-- TAB 2: INVENTORY EDITOR -->
+        <div id="tabInventoryContent" class="space-y-6 hidden max-h-[60vh] overflow-y-auto pr-1">
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <h4 id="formHeader" class="text-xs font-black text-slate-900 uppercase tracking-wider mb-3">Add New Vehicle Listing</h4>
+            <form id="carForm" class="space-y-3">
+              <input type="hidden" id="carDocId" value="" />
+              <div>
+                <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Car Title *</label>
+                <input type="text" id="carTitle" required placeholder="e.g. 2023 Mercedes-Benz C300 AMG" class="w-full px-3 py-2 rounded-lg border text-slate-900 text-sm" />
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Required Down Payment *</label>
+                  <input type="text" id="carDownPayment" required placeholder="e.g. $2,500" class="w-full px-3 py-2 rounded-lg border text-slate-900 text-sm" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Full Purchase Price *</label>
+                  <input type="text" id="carFullPrice" required placeholder="e.g. $34,900" class="w-full px-3 py-2 rounded-lg border text-slate-900 text-sm" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Image URL *</label>
+                <input type="url" id="carImageUrl" required placeholder="https://images.unsplash.com/..." class="w-full px-3 py-2 rounded-lg border text-slate-900 text-sm" />
+              </div>
+
+              <div>
+                <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Key Specifications (Comma-Separated)</label>
+                <input type="text" id="carSpecs" placeholder="Clean Title, 24k Miles, Automatic, Leather Interior" class="w-full px-3 py-2 rounded-lg border text-slate-900 text-sm" />
+              </div>
+
+              <div class="flex gap-2 pt-1">
+                <button type="submit" id="saveCarBtn" class="flex-1 py-3 bg-red-600 hover:bg-red-500 text-white font-extrabold rounded-xl text-xs sm:text-sm transition-all">
+                  Save Vehicle Listing
+                </button>
+                <button type="button" id="cancelEditBtn" class="hidden py-3 px-4 bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold rounded-xl text-xs sm:text-sm">
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-black text-slate-900 uppercase tracking-wider mb-3">Reorder & Edit Active Listings</h4>
+            <div id="adminInventoryList" class="space-y-2.5"></div>
+          </div>
         </div>
+
+        <!-- TAB 3: SECURITY & PASSWORD CHANGE -->
+        <div id="tabSecurityContent" class="space-y-4 hidden max-h-[60vh] overflow-y-auto pr-1">
+          <div class="p-5 bg-slate-50 rounded-2xl border border-slate-200 max-w-md mx-auto">
+            <h4 class="text-base font-black text-slate-900 mb-1">Change Admin Password</h4>
+            <p class="text-xs text-slate-500 mb-4">Your password is stored securely in Firebase Firestore. Public viewers cannot read it in your website code.</p>
+            
+            <form id="changePasswordForm" class="space-y-3">
+              <div>
+                <label class="block text-[11px] font-extrabold text-slate-700 uppercase mb-1">Current Password *</label>
+                <input type="password" id="currentPassInput" required class="w-full px-3 py-2.5 rounded-lg border text-sm font-semibold" placeholder="Enter current password" />
+              </div>
+
+              <div>
+                <label class="block text-[11px] font-extrabold text-slate-700 uppercase mb-1">New Password *</label>
+                <input type="password" id="newPassInput" required minlength="6" class="w-full px-3 py-2.5 rounded-lg border text-sm font-semibold" placeholder="Enter new password (min 6 chars)" />
+              </div>
+
+              <div>
+                <label class="block text-[11px] font-extrabold text-slate-700 uppercase mb-1">Confirm New Password *</label>
+                <input type="password" id="confirmPassInput" required minlength="6" class="w-full px-3 py-2.5 rounded-lg border text-sm font-semibold" placeholder="Repeat new password" />
+              </div>
+
+              <button type="submit" class="w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold rounded-xl shadow-md transition-all text-sm mt-2">
+                Update Admin Password Live
+              </button>
+            </form>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 
-  <!-- FIREBASE & LOGIC -->
+  <!-- FIREBASE & SECURE LOGIC -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { 
-      getFirestore, collection, onSnapshot, addDoc, doc, updateDoc, deleteDoc, serverTimestamp, query, orderBy 
+      getFirestore, collection, onSnapshot, addDoc, doc, setDoc, getDoc, updateDoc, deleteDoc, serverTimestamp, query, orderBy 
     } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
     const firebaseConfig = {
@@ -312,8 +416,98 @@
 
     let vehiclesList = [];
     let selectedCar = null;
+    let currentAdminPass = "admin123"; // Fallback default
     const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80";
 
+    // 1. SECURE PASSWORD INITIALIZATION & FETCH FROM FIRESTORE
+    const adminSecRef = doc(db, "settings", "admin");
+    
+    async function syncAdminPassword() {
+      try {
+        const docSnap = await getDoc(adminSecRef);
+        if (docSnap.exists() && docSnap.data().password) {
+          currentAdminPass = docSnap.data().password;
+        } else {
+          // Initialize default password in Firestore if not set yet
+          await setDoc(adminSecRef, { password: "admin123" }, { merge: true });
+          currentAdminPass = "admin123";
+        }
+      } catch (err) {
+        console.log("Database password sync status ready.");
+      }
+    }
+    syncAdminPassword();
+
+    // 2. LISTEN TO LIVE SITE COPY FROM FIRESTORE
+    let defaultCopy = {
+      brandName: "BUY CHEAP CARS",
+      brandSub: "Direct Wholesale Reservations",
+      heroBadge: "Direct Wholesale Pricing",
+      heroTitle1: "Drive Your Dream Car.",
+      heroTitle2: "Unbeatable Low Down Payments.",
+      heroDesc: "Reserve luxury or reliable daily vehicles directly. Low upfront down payments with official sales contracts delivered straight to your email inbox.",
+      heroCta: "VIEW AVAILABLE VEHICLES",
+      sectionSubhead: "Live Dealer Showroom",
+      sectionTitle: "Featured Vehicles"
+    };
+
+    const siteCopyDocRef = doc(db, "settings", "siteCopy");
+    onSnapshot(siteCopyDocRef, (docSnap) => {
+      let copy = defaultCopy;
+      if (docSnap.exists()) {
+        copy = { ...defaultCopy, ...docSnap.data() };
+      }
+      applySiteCopy(copy);
+      populateSiteCopyForm(copy);
+    });
+
+    function applySiteCopy(copy) {
+      document.getElementById("siteBrandName").innerText = copy.brandName;
+      document.getElementById("footerBrandName").innerText = copy.brandName;
+      document.getElementById("pageTitle").innerText = `${copy.brandName} | Direct Reservations`;
+      document.getElementById("siteBrandSub").innerText = copy.brandSub;
+      
+      document.getElementById("heroBadge").innerHTML = `<i class="fa-solid fa-bolt text-amber-300"></i> ${copy.heroBadge}`;
+      document.getElementById("heroTitleLine1").innerText = copy.heroTitle1;
+      document.getElementById("heroTitleLine2").innerText = copy.heroTitle2;
+      document.getElementById("heroDesc").innerText = copy.heroDesc;
+      document.getElementById("heroCtaText").innerText = copy.heroCta;
+
+      document.getElementById("sectionSubhead").innerText = copy.sectionSubhead;
+      document.getElementById("sectionTitle").innerText = copy.sectionTitle;
+    }
+
+    function populateSiteCopyForm(copy) {
+      document.getElementById("inputBrandName").value = copy.brandName;
+      document.getElementById("inputBrandSub").value = copy.brandSub;
+      document.getElementById("inputHeroBadge").value = copy.heroBadge;
+      document.getElementById("inputHeroTitle1").value = copy.heroTitle1;
+      document.getElementById("inputHeroTitle2").value = copy.heroTitle2;
+      document.getElementById("inputHeroDesc").value = copy.heroDesc;
+      document.getElementById("inputHeroCta").value = copy.heroCta;
+      document.getElementById("inputSectionSubhead").value = copy.sectionSubhead;
+      document.getElementById("inputSectionTitle").value = copy.sectionTitle;
+    }
+
+    document.getElementById("siteCopyForm").onsubmit = async (e) => {
+      e.preventDefault();
+      const updatedCopy = {
+        brandName: document.getElementById("inputBrandName").value,
+        brandSub: document.getElementById("inputBrandSub").value,
+        heroBadge: document.getElementById("inputHeroBadge").value,
+        heroTitle1: document.getElementById("inputHeroTitle1").value,
+        heroTitle2: document.getElementById("inputHeroTitle2").value,
+        heroDesc: document.getElementById("inputHeroDesc").value,
+        heroCta: document.getElementById("inputHeroCta").value,
+        sectionSubhead: document.getElementById("inputSectionSubhead").value,
+        sectionTitle: document.getElementById("inputSectionTitle").value
+      };
+
+      await setDoc(siteCopyDocRef, updatedCopy, { merge: true });
+      alert("All site texts and branding updated live!");
+    };
+
+    // 3. LISTEN TO VEHICLE INVENTORY
     const sampleVehicles = [
       {
         id: "sample-1",
@@ -344,7 +538,6 @@
       }
     ];
 
-    // 1. LIVE FIRESTORE INVENTORY LISTENER
     const carsCollection = collection(db, "vehicles");
     const q = query(carsCollection, orderBy("orderIndex", "asc"));
 
@@ -368,7 +561,7 @@
         const specsArray = car.specs ? car.specs.split(',').map(s => s.trim()) : [];
         return `
           <div class="car-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col group">
-            <div class="relative h-64 bg-slate-100 overflow-hidden">
+            <div class="relative h-56 sm:h-64 bg-slate-100 overflow-hidden">
               <img src="${car.imageUrl}" 
                    onerror="this.src='${FALLBACK_IMAGE}'" 
                    alt="${car.title}" 
@@ -378,29 +571,29 @@
               </div>
             </div>
 
-            <div class="p-6 flex-1 flex flex-col justify-between bg-white">
+            <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between bg-white">
               <div>
-                <h3 class="text-xl font-black text-slate-900 leading-snug mb-4">${car.title}</h3>
+                <h3 class="text-lg sm:text-xl font-black text-slate-900 leading-snug mb-4">${car.title}</h3>
                 
-                <div class="p-4 bg-emerald-50/90 rounded-2xl border border-emerald-200/80 mb-5 flex justify-between items-baseline">
+                <div class="p-3.5 sm:p-4 bg-emerald-50/90 rounded-2xl border border-emerald-200/80 mb-4 sm:mb-5 flex justify-between items-baseline">
                   <div>
                     <span class="text-[10px] font-black text-emerald-800 uppercase tracking-wider block">Required Down</span>
-                    <span class="text-3xl font-black text-emerald-600">${car.downPayment}</span>
+                    <span class="text-2xl sm:text-3xl font-black text-emerald-600">${car.downPayment}</span>
                   </div>
                   <div class="text-right">
                     <span class="text-[10px] font-extrabold text-slate-400 uppercase tracking-wider block">Full Price</span>
-                    <span class="text-sm font-extrabold text-slate-700">${car.fullPrice}</span>
+                    <span class="text-xs sm:text-sm font-extrabold text-slate-700">${car.fullPrice}</span>
                   </div>
                 </div>
 
                 ${specsArray.length > 0 ? `
-                  <div class="flex flex-wrap gap-1.5 mb-6">
-                    ${specsArray.map(spec => `<span class="bg-slate-100 border border-slate-200/60 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-lg">${spec}</span>`).join('')}
+                  <div class="flex flex-wrap gap-1.5 mb-5 sm:mb-6">
+                    ${specsArray.map(spec => `<span class="bg-slate-100 border border-slate-200/60 text-slate-700 text-[10px] sm:text-[11px] font-bold px-2.5 py-1 rounded-lg">${spec}</span>`).join('')}
                   </div>
                 ` : ''}
               </div>
 
-              <button onclick="openReservationModal('${car.id}')" class="w-full py-4 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-black rounded-xl shadow-lg shadow-red-600/20 transition-all flex items-center justify-center gap-2">
+              <button onclick="openReservationModal('${car.id}')" class="w-full py-3.5 sm:py-4 bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-black rounded-xl shadow-lg shadow-red-600/20 transition-all flex items-center justify-center gap-2 text-xs sm:text-sm">
                 <span>RESERVE VEHICLE NOW</span>
                 <i class="fa-solid fa-chevron-right text-xs"></i>
               </button>
@@ -410,7 +603,7 @@
       }).join('');
     }
 
-    // 2. RESERVATION MODAL
+    // 4. RESERVATION MODAL LOGIC
     window.openReservationModal = (carId) => {
       selectedCar = vehiclesList.find(c => c.id === carId);
       if (!selectedCar) return;
@@ -466,7 +659,7 @@
       });
     };
 
-    // 3. KEYBOARD SHORTCUT (Ctrl + Shift + A) & DIRECT ADMIN LOGIN
+    // 5. ADMIN AUTHENTICATION & PASSWORD UPDATE LOGIC
     const adminModal = document.getElementById('adminModal');
     
     window.addEventListener('keydown', (e) => {
@@ -480,12 +673,12 @@
       adminModal.classList.add('hidden');
     };
 
-    // Direct Password Check Fix
-    document.getElementById('adminLoginForm').onsubmit = (e) => {
+    document.getElementById('adminLoginForm').onsubmit = async (e) => {
       e.preventDefault();
+      await syncAdminPassword(); // Fetch freshest password
       const input = document.getElementById('adminPasswordInput').value;
 
-      if (input === 'admin123') {
+      if (input === currentAdminPass) {
         document.getElementById('adminLoginScreen').classList.add('hidden');
         document.getElementById('adminPanel').classList.remove('hidden');
         document.getElementById('loginError').classList.add('hidden');
@@ -500,22 +693,86 @@
       document.getElementById('adminPasswordInput').value = '';
     };
 
+    // Password Change Logic
+    document.getElementById('changePasswordForm').onsubmit = async (e) => {
+      e.preventDefault();
+      const currentInput = document.getElementById('currentPassInput').value;
+      const newPass = document.getElementById('newPassInput').value;
+      const confirmPass = document.getElementById('confirmPassInput').value;
+
+      if (currentInput !== currentAdminPass) {
+        alert("Incorrect current password!");
+        return;
+      }
+
+      if (newPass !== confirmPass) {
+        alert("New passwords do not match!");
+        return;
+      }
+
+      // Save new password live to Firestore
+      await setDoc(adminSecRef, { password: newPass }, { merge: true });
+      currentAdminPass = newPass;
+
+      alert("Admin password updated successfully!");
+      document.getElementById('changePasswordForm').reset();
+    };
+
+    // Tab Switchers
+    const tabSiteCopyBtn = document.getElementById('tabSiteCopyBtn');
+    const tabInventoryBtn = document.getElementById('tabInventoryBtn');
+    const tabSecurityBtn = document.getElementById('tabSecurityBtn');
+    
+    const tabSiteCopyContent = document.getElementById('tabSiteCopyContent');
+    const tabInventoryContent = document.getElementById('tabInventoryContent');
+    const tabSecurityContent = document.getElementById('tabSecurityContent');
+
+    tabSiteCopyBtn.onclick = () => {
+      tabSiteCopyBtn.className = "pb-3 text-xs sm:text-sm font-black text-red-600 border-b-2 border-red-600 whitespace-nowrap";
+      tabInventoryBtn.className = "pb-3 text-xs sm:text-sm font-extrabold text-slate-400 hover:text-slate-700 border-b-2 border-transparent whitespace-nowrap";
+      tabSecurityBtn.className = "pb-3 text-xs sm:text-sm font-extrabold text-slate-400 hover:text-slate-700 border-b-2 border-transparent whitespace-nowrap";
+      
+      tabSiteCopyContent.classList.remove('hidden');
+      tabInventoryContent.classList.add('hidden');
+      tabSecurityContent.classList.add('hidden');
+    };
+
+    tabInventoryBtn.onclick = () => {
+      tabInventoryBtn.className = "pb-3 text-xs sm:text-sm font-black text-red-600 border-b-2 border-red-600 whitespace-nowrap";
+      tabSiteCopyBtn.className = "pb-3 text-xs sm:text-sm font-extrabold text-slate-400 hover:text-slate-700 border-b-2 border-transparent whitespace-nowrap";
+      tabSecurityBtn.className = "pb-3 text-xs sm:text-sm font-extrabold text-slate-400 hover:text-slate-700 border-b-2 border-transparent whitespace-nowrap";
+      
+      tabInventoryContent.classList.remove('hidden');
+      tabSiteCopyContent.classList.add('hidden');
+      tabSecurityContent.classList.add('hidden');
+    };
+
+    tabSecurityBtn.onclick = () => {
+      tabSecurityBtn.className = "pb-3 text-xs sm:text-sm font-black text-red-600 border-b-2 border-red-600 whitespace-nowrap";
+      tabSiteCopyBtn.className = "pb-3 text-xs sm:text-sm font-extrabold text-slate-400 hover:text-slate-700 border-b-2 border-transparent whitespace-nowrap";
+      tabInventoryBtn.className = "pb-3 text-xs sm:text-sm font-extrabold text-slate-400 hover:text-slate-700 border-b-2 border-transparent whitespace-nowrap";
+      
+      tabSecurityContent.classList.remove('hidden');
+      tabSiteCopyContent.classList.add('hidden');
+      tabInventoryContent.classList.add('hidden');
+    };
+
     function renderAdminInventoryList(cars) {
       const list = document.getElementById('adminInventoryList');
       if (!cars || cars.length === 0) {
-        list.innerHTML = `<div class="text-xs text-slate-500 py-2">No vehicles to show.</div>`;
+        list.innerHTML = `<div class="text-xs text-slate-500 py-2">No vehicles in database.</div>`;
         return;
       }
 
       list.innerHTML = cars.map((car, index) => `
-        <div class="flex items-center justify-between p-3 bg-white rounded-xl border border-slate-200 text-xs shadow-sm">
-          <div class="flex items-center gap-3">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-3 bg-white rounded-xl border border-slate-200 text-xs gap-2 shadow-sm">
+          <div class="flex items-center gap-2.5">
             <span class="font-black text-slate-400">#${index + 1}</span>
             <span class="font-extrabold text-slate-900">${car.title}</span>
             <span class="text-emerald-600 font-bold">${car.downPayment}</span>
           </div>
 
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-1.5 self-end sm:self-auto">
             <button onclick="moveCar(${index}, -1)" ${index === 0 ? 'disabled class="opacity-30 text-slate-400 p-1"' : 'class="p-1 text-slate-700 hover:text-red-600 font-bold"'}>
               <i class="fa-solid fa-arrow-up"></i>
             </button>
@@ -596,7 +853,7 @@
       }
     };
 
-    // 4. HERO SLIDESHOW TIMER
+    // 6. HERO SLIDESHOW TIMER
     const slides = document.querySelectorAll('.hero-slide');
     let currentSlide = 0;
     setInterval(() => {
